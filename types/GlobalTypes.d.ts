@@ -1,0 +1,3 @@
+type SearchFilterParams = {
+    page?: number
+}
