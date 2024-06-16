@@ -1,5 +1,6 @@
+'use client'
 import { CommonColors } from '@mui/material/styles/createPalette';
-import { alpha, PaletteOptions, PaletteColorOptions, PaletteColor } from '@mui/material/styles';
+import { PaletteOptions, PaletteColorOptions, PaletteColor, alpha } from '@mui/material/styles';
 import { customgreyProps } from '@/types/ThemeConfig';
 
 // ----------------------------------------------------------------------

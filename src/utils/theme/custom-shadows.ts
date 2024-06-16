@@ -1,3 +1,4 @@
+'use client'
 import { CustomShadow } from '@/types/ThemeConfig';
 import { alpha, Theme } from '@mui/material/styles';
 

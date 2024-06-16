@@ -1,3 +1,4 @@
+'use client'
 import { alpha, Theme } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------

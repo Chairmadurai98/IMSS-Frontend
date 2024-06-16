@@ -1,3 +1,4 @@
+import { Button, Typography } from "@mui/material";
 import Link from "next/link";
 
  export default  function Home() {
@@ -11,6 +12,8 @@ import Link from "next/link";
       <Link href={'/user-list'} >
           Redux Think User
       </Link>
+      <Typography variant="subtitle3">Helo</Typography>
+      <Button variant="export" >Helo</Button>
     </main>
   );
 }

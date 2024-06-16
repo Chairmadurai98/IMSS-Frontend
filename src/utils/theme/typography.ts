@@ -1,5 +1,6 @@
 // ----------------------------------------------------------------------
 
+'use client'
 import { TypographyOptions } from '@mui/material/styles/createTypography';
 
 
