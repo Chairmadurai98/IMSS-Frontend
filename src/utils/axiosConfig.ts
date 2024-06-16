@@ -1,5 +1,5 @@
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import axios, { AxiosError, AxiosInstance, AxiosResponse } from "axios";
+import axios, { AxiosResponse } from "axios";
 import { getServerSession, Session } from "next-auth";
 
 const { API_BASE_URL } = process.env;
@@ -16,17 +16,17 @@ AXIOSSERVER.interceptors.request.use(async (config) => {
     config.headers.Authorization = `Bearer ${token}`;
   }
   return config;
-})
+});
 
-type Res = AxiosResponse['data']
+type Res = AxiosResponse["data"];
 
-
- 
 AXIOSSERVER.interceptors.response.use(
-  (response) => Promise.resolve(response.data) as Promise<Res>,
+  (response) => Promise.resolve(response?.data) as Promise<Res>,
   (error) => {
-    return Promise.reject(error.response.data) as Promise<Res>;
+    return Promise.reject(
+      error?.response?.data || error?.response
+    ) as Promise<Res>;
   }
 );
 
-export default AXIOSSERVER
+export default AXIOSSERVER;

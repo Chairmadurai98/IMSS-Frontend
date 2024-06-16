@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NextAuthProvider from "@/components/utils/NextAuthProvider";
+import MuiThemeProvider from "@/components/utils/MuiThemeProvider";
+import { primary } from "@/utils/theme/palette";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NextAuthProvider>
-          {children}
+          <MuiThemeProvider customTheme={primary}>
+            {children}
+          </MuiThemeProvider>
         </NextAuthProvider>
         </body>
     </html>
