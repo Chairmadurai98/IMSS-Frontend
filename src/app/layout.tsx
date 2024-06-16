@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <NextAuthProvider>
           <MuiThemeProvider customTheme={primary}>
-            {children}
+              {children}
           </MuiThemeProvider>
         </NextAuthProvider>
         </body>

@@ -1,7 +1,6 @@
 'use client'
 import { CommonColors } from '@mui/material/styles/createPalette';
 import { PaletteOptions, PaletteColorOptions, PaletteColor, alpha } from '@mui/material/styles';
-import { customgreyProps } from '@/types/ThemeConfig';
 
 // ----------------------------------------------------------------------
 
@@ -19,7 +18,7 @@ export const grey = {
     900: '#161C24',
 };
 
-export const customColor: customgreyProps = {
+export const customColor: PaletteOptions['customColor'] = {
     darkRed: '#F25C54',
     darkGreyOne: '#808285',
     darkGreyTwo: '#686868',

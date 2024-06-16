@@ -13,7 +13,6 @@ import Link from "next/link";
           Redux Think User
       </Link>
       <Typography variant="subtitle3">Helo</Typography>
-      <Button variant="export" >Helo</Button>
     </main>
   );
 }
