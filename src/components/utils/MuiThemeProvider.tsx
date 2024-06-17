@@ -2,7 +2,7 @@
 import { useMemo } from 'react';
 
 import CssBaseline from '@mui/material/CssBaseline';
-import { Theme, Shadows, useTheme, createTheme, ThemeProvider, PaletteColor } from '@mui/material/styles';
+import { Theme, Shadows, useTheme, createTheme, ThemeProvider, PaletteColor, Components } from '@mui/material/styles';
 import { palette} from '@/utils/theme/palette';
 import { shadows } from '@/utils/theme/shadows';
 import { customShadows } from '@/utils/theme/custom-shadows';
@@ -40,7 +40,7 @@ export default function MuiThemeProvider({ children, customTheme }: { children: 
     
 
     const overRideTheme: Theme = createTheme(memoizedValue);
-    overRideTheme.components = overrides(overRideTheme)
+    overRideTheme.components = overrides(overRideTheme) as Theme['components']
     return (
         <AppRouterCacheProvider>
             <ThemeProvider theme={overRideTheme}>

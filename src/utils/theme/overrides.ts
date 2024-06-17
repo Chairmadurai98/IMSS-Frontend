@@ -1,5 +1,5 @@
 'use client'
-import { alpha } from "@mui/material/styles";
+import { alpha, Components } from "@mui/material/styles";
 import { outlinedInputClasses } from "@mui/material/OutlinedInput";
 import {
   Theme,
@@ -13,7 +13,9 @@ import {
 
 // ----------------------------------------------------------------------
 
-export function overrides(theme: Theme) {
+
+
+export function overrides(theme: Theme) : Theme['components']{
   return {
     MuiCssBaseline: {
       styleOverrides: {
@@ -104,10 +106,10 @@ export function overrides(theme: Theme) {
       },
     },
     MuiCardHeader: {
-      defaultProps: {
-        titleTypographyProps: { variant: "h4" },
-        subheaderTypographyProps: { variant: "body2" },
-      },
+      // defaultProps: {
+      //   titleTypographyProps: { variant: "h4" },
+      //   subheaderTypographyProps: { variant: "body2" },
+      // },
       styleOverrides: {
         root: {
           padding: theme.spacing(3, 3, 0),
@@ -261,6 +263,17 @@ export function overrides(theme: Theme) {
           marginBottom: theme.spacing(1),
         },
       },
+      variants : [{
+        props: {
+          size: "small",
+        },
+        style : ({})=>{
+          return {
+
+          }
+        }
+
+      }],
     },
     MuiMenuItem: {
       styleOverrides: {
@@ -284,5 +297,5 @@ export function overrides(theme: Theme) {
         },
       },
     },
-  } as Theme['components'];
+  };
 }

@@ -12,7 +12,7 @@ import Link from "next/link";
       <Link href={'/user-list'} >
           Redux Think User
       </Link>
-      <Typography variant="subtitle3">Helo</Typography>
+      <Typography size="small" variant="subtitle3">Helo</Typography>
     </main>
   );
 }
